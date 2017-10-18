@@ -66,5 +66,5 @@ class Cus_dvd(db.Entity):
     PrimaryKey(customers, dvds)
 
 
-
-db.generate_mapping()
+db.bind("postgres", host="localhost", user="ivy", database="ivy", password="password")
+db.generate_mapping(create_tables = True)
